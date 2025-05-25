@@ -16,10 +16,10 @@ export default function Loader() {
         {/* Loader Image */}
         <div className="mb-6">
           <Image
-            src="/your-loader-image.png" // Replace with your image path
+            src="../images/loader.png"
             alt="Loading..."
-            width={80}
-            height={80}
+            width={350}
+            height={400}
           />
         </div>
       </motion.div>

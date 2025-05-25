@@ -109,11 +109,11 @@ export default function TopNavigation({
             </button>
           </div>
 
-          {/* Theme Toggle */}
+          {/* Theme Toggle - Desktop only */}
           {mounted && (
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
+              className="hidden md:inline-flex p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
               aria-label="Toggle theme"
             >
               {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -125,11 +125,11 @@ export default function TopNavigation({
       {/* Mobile Navigation */}
       {isMobile && (
         <div className="flex items-center space-x-4">
-          {/* Theme Toggle for Mobile */}
+          {/* Theme Toggle for Mobile only */}
           {mounted && (
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
+              className="inline-flex md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
               aria-label="Toggle theme"
             >
               {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -139,7 +139,7 @@ export default function TopNavigation({
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center z-50"
             aria-label="Toggle menu"
           >
             <Menu className="h-5 w-5" />
@@ -152,7 +152,7 @@ export default function TopNavigation({
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className={`absolute top-16 right-4 left-4 ${bgColor} border ${borderColor} rounded-md shadow-lg p-4 z-50`}
+          className={`absolute top-16 right-4 left-4 ${bgColor} border ${borderColor} rounded-md shadow-lg p-4 z-40`}
         >
           <div className="flex flex-col space-y-4">
             <button
