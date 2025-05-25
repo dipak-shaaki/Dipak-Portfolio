@@ -17,11 +17,11 @@ import TopNavigation from "@/components/top-navigation"
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with payment integration",
+    title: "SAMA-Health Platform",
+    description: "A full-stack e-health solution with payment integration",
     category: "Interaction & Development",
     image: "/placeholder.svg?height=300&width=500",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    tags: ["React", "Node.js", "MongoDB", "TypeScript"],
     fullDescription:
       "A comprehensive e-commerce platform built with the MERN stack. Features include product catalog, user authentication, shopping cart, payment processing with Stripe, and order management. The application is designed to be scalable and maintainable, with a clean architecture that separates concerns and follows best practices.\n\nThe frontend is built with React and uses Redux for state management. The backend is built with Node.js and Express, with MongoDB as the database. The application is deployed on AWS using Docker containers.",
     screenshots: [
@@ -32,7 +32,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Social Media Dashboard",
+    title: "Bhoomi-Pranali",
     description: "Analytics dashboard for social media management",
     category: "Design & Development",
     image: "/placeholder.svg?height=300&width=500",
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "AI Content Generator",
+    title: "",
     description: "Content generation tool powered by machine learning",
     category: "Interaction & Development",
     image: "/placeholder.svg?height=300&width=500",

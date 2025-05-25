@@ -69,11 +69,12 @@ export default function TopNavigation({
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-700">
             <Image
-              src="/placeholder.svg?height=100&width=100"
+              src="../images/profile.jpg"
               alt="Profile"
-              width={40}
-              height={40}
-              className="object-cover"
+              width={38}
+              height={20}
+              className="object-cover h-full"
+              
             />
           </div>
         </Link>
