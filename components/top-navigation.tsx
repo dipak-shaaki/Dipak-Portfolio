@@ -69,7 +69,7 @@ export default function TopNavigation({
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-700">
             <Image
-              src="../images/profile.jpg"
+              src="../images/profilee.jpg"
               alt="Profile"
               width={38}
               height={20}
@@ -111,15 +111,7 @@ export default function TopNavigation({
           </div>
 
           {/* Theme Toggle - Desktop only */}
-          {mounted && (
-            <button
-              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="hidden md:inline-flex p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-              aria-label="Toggle theme"
-            >
-              {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
-          )}
+          
         </div>
       )}
 
@@ -127,15 +119,7 @@ export default function TopNavigation({
       {isMobile && (
         <div className="flex items-center space-x-4">
           {/* Theme Toggle for Mobile only */}
-          {mounted && (
-            <button
-              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="inline-flex md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-              aria-label="Toggle theme"
-            >
-              {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
-          )}
+         
 
           {/* Mobile Menu Button */}
           <button

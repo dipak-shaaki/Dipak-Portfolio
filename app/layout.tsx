@@ -1,7 +1,8 @@
 import type React from "react"
 import "@/app/globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import ThemeScrollEffect from "@/components/theme-scroll-effect"
+
 
 // Import Plus Jakarta Sans Variable font
 import { Plus_Jakarta_Sans } from "next/font/google"
@@ -23,9 +24,9 @@ export default function RootLayout({
         <meta name="description" content="Personal portfolio of Dipak Shanki" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", plusJakartaSans.variable)}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <ThemeScrollEffect>
           {children}
-        </ThemeProvider>
+        </ThemeScrollEffect>
       </body>
     </html>
   )

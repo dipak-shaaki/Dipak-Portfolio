@@ -74,7 +74,7 @@ export default function ContactSection() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe *"
+                  placeholder="Enter your name *"
                   required
                   className="border-0 border-b border-gray-300 dark:border-gray-700 rounded-none px-0 py-2 text-black dark:text-white bg-transparent focus-visible:ring-0 focus-visible:border-primary"
                 />
@@ -90,22 +90,8 @@ export default function ContactSection() {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="john@example.com *"
+                  placeholder="Enter you email address *"
                   required
-                  className="border-0 border-b border-gray-300 dark:border-gray-700 rounded-none px-0 py-2 text-black dark:text-white bg-transparent focus-visible:ring-0 focus-visible:border-primary"
-                />
-              </div>
-
-              <div className="space-y-1">
-                <label htmlFor="organization" className="text-sm text-gray-500 dark:text-gray-400">
-                  03 — What's the name of your organization?
-                </label>
-                <Input
-                  id="organization"
-                  name="organization"
-                  value={formData.organization}
-                  onChange={handleChange}
-                  placeholder="Acme Inc."
                   className="border-0 border-b border-gray-300 dark:border-gray-700 rounded-none px-0 py-2 text-black dark:text-white bg-transparent focus-visible:ring-0 focus-visible:border-primary"
                 />
               </div>
@@ -119,7 +105,7 @@ export default function ContactSection() {
                   name="services"
                   value={formData.services}
                   onChange={handleChange}
-                  placeholder="Web Design, Web Development"
+                  placeholder="Data analysis, Web Development"
                   className="border-0 border-b border-gray-300 dark:border-gray-700 rounded-none px-0 py-2 text-black dark:text-white bg-transparent focus-visible:ring-0 focus-visible:border-primary"
                 />
               </div>
