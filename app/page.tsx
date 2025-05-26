@@ -150,7 +150,7 @@ export default function Home() {
           ref={workRef}
           className="min-h-[80vh] flex flex-col justify-center py-16 px-4 sm:px-8 md:px-16 lg:px-24"
         >
-          <div className="w-full max-w-7xl mx-auto mb-4">
+          <div className="w-full max-w-7xl mx-auto mb-3">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="h-px w-full bg-gray-300 dark:bg-gray-700 mb-6"></div>
           </div>
 
-          <div className="w-full max-w-7xl mx-auto">
+          <div className="w-full max-w-7xl mx-auto ">
             {projects.map((project, index) => (
               <WorkItem
                 key={project.id}

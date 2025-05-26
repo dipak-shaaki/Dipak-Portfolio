@@ -54,16 +54,16 @@ export default function ResumePage() {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-black dark:text-white mb-2">Dipak Shanki</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Full Stack Developer</p>
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">MERN Stack Developer</p>
 
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-1" />
-                dipak@example.com
+                shanki.dipak@gmail.com
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-1" />
-                +977 98XXXXXXXX
+                +977 9841657581
               </div>
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-1" />
@@ -72,12 +72,12 @@ export default function ResumePage() {
             </div>
 
             <div className="flex justify-center gap-4 mt-4">
-              <Link href="https://github.com" className="flex items-center text-primary hover:underline">
+              <Link href="https://github.com/dipak-shaaki" className="flex items-center text-primary hover:underline">
                 <Github className="h-4 w-4 mr-1" />
                 GitHub
                 <ExternalLink className="h-3 w-3 ml-1" />
               </Link>
-              <Link href="https://linkedin.com" className="flex items-center text-primary hover:underline">
+              <Link href="https://www.linkedin.com/in/dipak-shanki/" className="flex items-center text-primary hover:underline">
                 <Linkedin className="h-4 w-4 mr-1" />
                 LinkedIn
                 <ExternalLink className="h-3 w-3 ml-1" />
@@ -91,9 +91,7 @@ export default function ResumePage() {
               Professional Summary
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Passionate and motivated fresh graduate with strong knowledge in MERN stack development. Enthusiastic
-              about creating innovative web applications and exploring AI/ML technologies. Quick learner with excellent
-              problem-solving skills and a dedication to writing clean, efficient code.
+         Motivated MERN Stack fresher with a solid foundation in web development and a growing interest in Data Science. Eager to contribute to real-world projects and learn from industry professionals.
             </p>
           </section>
 
@@ -106,7 +104,7 @@ export default function ResumePage() {
               <div>
                 <h3 className="font-semibold text-black dark:text-white mb-2">Frontend Development</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
-                  React, JavaScript, HTML5, CSS3, Tailwind CSS, Bootstrap
+                  HTML5,CSS3,Tailwind CSS,React, JavaScript
                 </p>
               </div>
               <div>
@@ -134,10 +132,10 @@ export default function ResumePage() {
               Education
             </h2>
             <div className="mb-4">
-              <h3 className="font-semibold text-black dark:text-white">Bachelor's Degree in Computer Science</h3>
-              <p className="text-gray-600 dark:text-gray-400">University Name • 2020 - 2024</p>
+              <h3 className="font-semibold text-black dark:text-white">Bachelor's Computer Science And Information technology</h3>
+              <p className="text-gray-600 dark:text-gray-400">Tribhuwvan University • 2021 - current</p>
               <p className="text-gray-700 dark:text-gray-300 text-sm mt-1">
-                Relevant coursework: Data Structures, Algorithms, Database Management, Web Development
+                Relevant coursework: Data Structures and Algorithm, Database Management, Web Technology,Statistics,ASP.Net,Data Mining and Warehousing
               </p>
             </div>
           </section>
@@ -149,18 +147,17 @@ export default function ResumePage() {
             </h2>
             <div className="space-y-4">
               <div>
-                <h3 className="font-semibold text-black dark:text-white">E-Commerce Platform</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">MERN Stack • Personal Project</p>
+                <h3 className="font-semibold text-black dark:text-white">SAMA Health Platform</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">MERN Stack • Academic Project</p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mt-1">
-                  Full-stack e-commerce application with user authentication, product catalog, and payment integration.
+                  A comprehensive health platform for managing patient records, appointments, and medical history using the MERN stack.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-black dark:text-white">Data Analysis Dashboard</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">Python, Pandas • Academic Project</p>
+                <h3 className="font-semibold text-black dark:text-white">BhoomiPranali</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">MERN Stack • Personal Project</p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mt-1">
-                  Interactive dashboard for data visualization and analysis using Python and machine learning
-                  algorithms.
+                  A complete land management system for Nepal, enabling users to manage land records and transactions efficiently.
                 </p>
               </div>
             </div>
@@ -173,12 +170,12 @@ export default function ResumePage() {
             </h2>
             <div className="space-y-2">
               <div>
-                <h3 className="font-semibold text-black dark:text-white">Full Stack Web Development</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">Online Course Platform • 2024</p>
+                <h3 className="font-semibold text-black dark:text-white">React-JS</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Sikaai-IT • 2023</p>
               </div>
               <div>
-                <h3 className="font-semibold text-black dark:text-white">Introduction to Machine Learning</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">Coursera • 2024</p>
+                <h3 className="font-semibold text-black dark:text-white">AI ML Bootcamp</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm"> • 2024</p>
               </div>
             </div>
           </section>

@@ -27,7 +27,7 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://www.linkedin.com/in/dipak-shanki-02702435a/"
+              href="https://www.linkedin.com/in/dipak-shanki/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:opacity-70 transition-opacity"

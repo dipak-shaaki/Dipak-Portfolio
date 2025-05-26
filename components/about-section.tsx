@@ -44,8 +44,7 @@ export default function AboutSection() {
         >
         
           <p className="text-base mb-4 text-black dark:text-white leading-relaxed">
-            Hi, I'm a passionate MERN stack developer with a keen interest in AI and machine learning. I thrive on
-            solving complex problems and building efficient, scalable applications.
+            A learning MERN Stack Developer with a keen interest in AI/ML. I thrive on solving complex problems and continuously learning new technologies. My journey in web development has equipped me with a solid foundation in both frontend and backend technologies, allowing me to build robust and scalable applications.
           </p>
         
           <Link href="/resume">
