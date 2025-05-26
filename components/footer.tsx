@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex justify-center space-x-8 mb-8">
             <Link
-              href="https://github.com"
+              href="https://github.com/dipak-shaaki"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:opacity-70 transition-opacity"
@@ -27,7 +27,7 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/dipak-shanki-02702435a/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:opacity-70 transition-opacity"
@@ -36,7 +36,7 @@ export default function Footer() {
               <span className="sr-only">LinkedIn</span>
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/dipak.shaki/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:opacity-70 transition-opacity"
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-black dark:text-white text-center">
-            Copyright © {new Date().getFullYear()} Dipak. All rights reserved.
+            Copyright © {new Date().getFullYear()} All rights reserved.
           </p>
         </motion.div>
       </div>

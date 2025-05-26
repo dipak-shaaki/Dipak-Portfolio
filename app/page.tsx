@@ -66,27 +66,27 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with payment integration",
+      title: "SAMA Health Platform",
+      description: "A comprehensive digital healthcare platform built with React, TypeScript, Tailwind CSS, and Node.js/Express",
       category: "Interaction & Development",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      tags: ["React", "Node.js", "MongoDB", "Express"],
     },
     {
       id: 2,
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management",
-      category: "Design & Development",
+      title: "Bhoomi Pranali",
+      description: "A complete land management system for Nepal",
+      category: "Full Stack Development",
       image: "/placeholder.svg?height=300&width=500",
       tags: ["React", "D3.js", "Firebase"],
     },
     {
       id: 3,
-      title: "AI Content Generator",
-      description: "Content generation tool powered by machine learning",
-      category: "Interaction & Development",
+      title: "Forest Fire Detection",
+      description: "A machine learning model to detect forest fires using satellite imagery",
+      category: "Machine Learning,AI",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Python", "TensorFlow", "React", "Flask"],
+      tags: ["Python", "TensorFlow", "AI", "Flask"],
     },
   ]
 
@@ -127,7 +127,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight mb-4 text-black dark:text-white">
+            <h1 className="text-5xl sm:text-4xl md:text-5xl font-medium tracking-tight mb-4 text-black dark:text-white">
               hi, i'm{" "}
               <NameHoverEffect>
                 <span className="font-bold">dipak</span>
@@ -139,9 +139,9 @@ export default function Home() {
               <span className="text-base">Kathmandu, Nepal</span>
             </div>
 
-            <p className="text-base sm:text-lg text-black dark:text-white max-w-2xl mx-auto">
+            {/* <p className="text-base sm:text-lg text-black dark:text-white max-w-2xl mx-auto">
               Full-stack developer specializing in creating interactive and dynamic web applications.
-            </p>
+            </p> */}
           </motion.div>
         </section>
 

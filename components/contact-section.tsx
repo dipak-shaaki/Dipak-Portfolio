@@ -51,11 +51,11 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-black dark:text-white">
-              Let's start a<br />
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-black dark:text-white">            
+              Have a
               project
               <br />
-              together
+              in mind?
             </h2>
           </motion.div>
 
@@ -148,7 +148,7 @@ export default function ContactSection() {
             <div className="mb-6 flex justify-end">
               <div className="w-20 h-20 rounded-full overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="/images/profile.jpg"
                   alt="Profile"
                   width={80}
                   height={80}

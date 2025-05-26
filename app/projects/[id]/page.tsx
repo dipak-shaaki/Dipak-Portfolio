@@ -8,7 +8,7 @@ import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import CustomCursor from "@/components/custom-cursor"
-import ThemeToggle from "@/components/theme-toggle"
+// import ThemeToggle from "@/components/theme-toggle"
 import Footer from "@/components/footer"
 import TopNavigation from "@/components/top-navigation"
 
@@ -17,13 +17,13 @@ import TopNavigation from "@/components/top-navigation"
 const projects = [
   {
     id: 1,
-    title: "SAMA-Health Platform",
+    title: "SAMA Health Platform",
     description: "A full-stack e-health solution with payment integration",
     category: "Interaction & Development",
     image: "/placeholder.svg?height=300&width=500",
     tags: ["React", "Node.js", "MongoDB", "TypeScript"],
     fullDescription:
-      "A comprehensive e-commerce platform built with the MERN stack. Features include product catalog, user authentication, shopping cart, payment processing with Stripe, and order management. The application is designed to be scalable and maintainable, with a clean architecture that separates concerns and follows best practices.\n\nThe frontend is built with React and uses Redux for state management. The backend is built with Node.js and Express, with MongoDB as the database. The application is deployed on AWS using Docker containers.",
+      " SAMA Health Platform is a comprehensive digital healthcare platform built with React, TypeScript, Tailwind CSS, and Node.js/Express. It provides a seamless user experience for patients and healthcare providers, allowing them to manage appointments, access medical records, and communicate securely.\n\nThe platform features a responsive design, ensuring accessibility across devices. The backend is powered by Node.js and Express, with MongoDB for data storage. The application also includes payment integration for easy transaction processing.",
     screenshots: [
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
@@ -32,13 +32,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Bhoomi-Pranali",
+    title: "Bhoomi Pranali",
     description: "Analytics dashboard for social media management",
-    category: "Design & Development",
+    category: "Full Stack Development",
     image: "/placeholder.svg?height=300&width=500",
-    tags: ["React", "D3.js", "Firebase"],
+    tags: ["MongoDB", "nextjs", "javascript"],
     fullDescription:
-      "A powerful dashboard for social media managers to track performance across multiple platforms. Includes real-time analytics, content scheduling, and audience insights. The dashboard provides a unified view of all social media accounts, making it easy to compare performance and identify trends.\n\nThe application is built with React and uses D3.js for data visualization. Firebase is used for authentication, database, and hosting. The application is designed to be responsive and works well on all devices.",
+      "A complete land management system for Nepal, built with React and D3.js. The application provides a user-friendly interface for managing land records, including ownership details, land use, and transaction history.\n\nThe backend is built with mongodb for real-time data synchronization and authentication. The application is designed to be responsive and accessible, ensuring that users can manage land records from any device.",
     screenshots: [
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
@@ -48,12 +48,12 @@ const projects = [
   {
     id: 3,
     title: "",
-    description: "Content generation tool powered by machine learning",
-    category: "Interaction & Development",
+    description: "Forest fire detection ",
+    category: "Machine Learning,AI",
     image: "/placeholder.svg?height=300&width=500",
     tags: ["Python", "TensorFlow", "React", "Flask"],
     fullDescription:
-      "An AI-powered content generation tool that helps creators produce high-quality articles, social media posts, and marketing copy. Built with a Python backend and React frontend. The tool uses natural language processing to understand the context and generate relevant content.\n\nThe backend is built with Python and Flask, with TensorFlow for the machine learning models. The frontend is built with React and uses Redux for state management. The application is deployed on Google Cloud Platform.",
+      "This project is under development and will be available soon. Stay tuned for updates!\n\nForest Fire Detection is a machine learning model designed to detect forest fires using satellite imagery. The project utilizes Python and TensorFlow for model training and prediction, with Flask for the backend API.\n\nThe application processes satellite images to identify patterns indicative of forest fires, providing real-time alerts to prevent potential disasters. The frontend is built with React, offering an intuitive interface for users to upload images and view predictions.",
     screenshots: [
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
@@ -105,7 +105,7 @@ export default function ProjectPage() {
       </div>
 
       <div className="fixed top-6 right-6 z-50">
-        <ThemeToggle />
+      
       </div>
 
       <main className="container mx-auto px-4 py-24">

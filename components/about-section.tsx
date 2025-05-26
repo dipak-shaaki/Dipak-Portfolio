@@ -20,11 +20,11 @@ export default function AboutSection() {
     },
     {
       category: "Backend",
-      technologies: ["Node.js", "Express.js", "MongoDB", "RESTful APIs"],
+      technologies: ["Node.js", "Express.js", "MongoDB", "POSTGRESQL","RESTful APIs"],
     },
     {
       category: "AI/ML & Data",
-      technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "TensorFlow"],
+      technologies: ["Python", "Pandas", "NumPy", "Matplotlib","Scikit-learn", "TensorFlow"],
     },
     {
       category: "Tools",
@@ -42,22 +42,16 @@ export default function AboutSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-black dark:text-white">
-            Fresh Perspective, Endless Possibilities
-          </h3>
+        
           <p className="text-base mb-4 text-black dark:text-white leading-relaxed">
-            I'm a passionate fresher from Kathmandu, Nepal, with strong knowledge in MERN stack development. My
-            enthusiasm for technology drives me to create innovative solutions and explore the exciting world of AI/ML
-            and Data Science.
+            Hi, I'm a passionate MERN stack developer with a keen interest in AI and machine learning. I thrive on
+            solving complex problems and building efficient, scalable applications.
           </p>
-          <p className="text-base mb-6 text-black dark:text-white leading-relaxed">
-            Ready to contribute fresh ideas and modern approaches while continuously learning and growing as a
-            developer.
-          </p>
+        
           <Link href="/resume">
             <Button className="flex items-center gap-2 text-sm">
               <FileDown className="h-4 w-4" />
-              View Resume
+            Resume
             </Button>
           </Link>
         </motion.div>
