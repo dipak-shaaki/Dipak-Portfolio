@@ -114,7 +114,7 @@ export default function ProjectPage() {
           Back to Work
         </Button>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+        <div>
           <div className="mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">{project.title}</h1>
             <p className="text-muted-foreground text-sm mb-6">{project.category}</p>
@@ -154,7 +154,7 @@ export default function ProjectPage() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Add this at the end of your main return, after project details */}
         <div className="mt-8 flex justify-center">
