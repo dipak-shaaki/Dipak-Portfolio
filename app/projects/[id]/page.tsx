@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -132,7 +132,7 @@ export default function ProjectPage() {
               <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
             </div>
 
-            <div className="prose dark:prose-invert max-w-none">
+            <div className="max-w-none">
               {project.fullDescription.split("\n\n").map((paragraph: string, index: number) => (
                 <p key={index} className="text-muted-foreground mb-4 text-sm">
                   {paragraph}
