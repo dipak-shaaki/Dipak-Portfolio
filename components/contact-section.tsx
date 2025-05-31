@@ -12,6 +12,7 @@ import Image from "next/image"
 export default function ContactSection() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,17 +29,46 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus("idle")
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const { name, email, organization, services, message } = formData;
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    })
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, organization, services, message }),
+      });
 
-    setFormData({ name: "", email: "", organization: "", services: "", message: "" })
-    setIsSubmitting(false)
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", organization: "", services: "", message: "" });
+        setSubmitStatus("success");
+      } else {
+        const errorData = await response.json();
+        toast({
+          title: "Failed to send message.",
+          description: errorData.message || "An error occurred.",
+          variant: "destructive",
+        });
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast({
+        title: "An unexpected error occurred.",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -131,7 +161,7 @@ export default function ContactSection() {
                   className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 h-auto text-base"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send"}
+                  {isSubmitting ? "Sending..." : submitStatus === "success" ? "Sent !" : "Send"}
                 </Button>
               </div>
             </form>
