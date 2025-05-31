@@ -68,6 +68,19 @@ export default function ProjectPage() {
   const [project, setProject] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [activeSection, setActiveSection] = useState("")
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   useEffect(() => {
     // Find the project with the matching ID
@@ -97,7 +110,7 @@ export default function ProjectPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-black">
       <CustomCursor />
       {/* New Navigation Bar */}
       <div className="fixed top-0 left-0 right-0 z-50">
@@ -108,7 +121,7 @@ export default function ProjectPage() {
       
       </div>
 
-      <main className="container mx-auto px-4 py-24">
+      <main className="flex-grow container mx-auto px-4 pt-24 pb-8">
         <Button variant="ghost" className="mb-8 flex items-center" onClick={() => router.push("/")}>
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Work
