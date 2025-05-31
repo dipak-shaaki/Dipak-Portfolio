@@ -67,20 +67,6 @@ export default function ProjectPage() {
   const router = useRouter()
   const [project, setProject] = useState<any>(null)
   const [loading, setLoading] = useState(true)
-  const [activeSection, setActiveSection] = useState("")
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   useEffect(() => {
     // Find the project with the matching ID
@@ -102,26 +88,24 @@ export default function ProjectPage() {
   }
 
   if (loading) {
-    return <div className="h-screen flex items-center justify-center">Loading...</div>
+    return <div className="flex min-h-screen items-center justify-center bg-white dark:bg-black">Loading...</div>
   }
 
   if (!project) {
-    return <div className="h-screen flex items-center justify-center">Project not found</div>
+    return <div className="flex min-h-screen items-center justify-center bg-white dark:bg-black">Project not found</div>
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-black">
+    <div className="relative min-h-screen bg-white dark:bg-black">
       <CustomCursor />
-      {/* New Navigation Bar */}
+
+      {/* Fixed Navigation Bar */}
       <div className="fixed top-0 left-0 right-0 z-50">
         <TopNavigation onWorkClick={goToHome} onAboutClick={goToHome} onContactClick={goToHome} activeSection="work" />
       </div>
 
-      <div className="fixed top-6 right-6 z-50">
-      
-      </div>
-
-      <main className="flex-grow container mx-auto px-4 pt-24 pb-8">
+      {/* Main content area with padding to avoid overlap with fixed header */}
+      <main className="container mx-auto px-4 pt-24 pb-8">
         <Button variant="ghost" className="mb-8 flex items-center" onClick={() => router.push("/")}>
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Work
@@ -129,7 +113,7 @@ export default function ProjectPage() {
 
         <div>
           <div className="mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">{project.title}</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-gray-900 dark:text-white">{project.title}</h1>
             <p className="text-muted-foreground text-sm mb-6">{project.category}</p>
             <div className="flex flex-wrap gap-2 mb-8">
               {project.tags.map((tag: string, index: number) => (
@@ -154,7 +138,7 @@ export default function ProjectPage() {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold mb-8">Project Screenshots</h2>
+          <h2 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Project Screenshots</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {project.screenshots.map((screenshot: string, index: number) => (
               <div key={index} className="relative h-[200px] sm:h-[250px] rounded-lg overflow-hidden">
@@ -177,7 +161,7 @@ export default function ProjectPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded bg-gray-900 text-white hover:bg-gray-700 transition"
           >
-            <svg xmlns="http://www.w3.org/200/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.12 2.51.35 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
             </svg>
             View Source on GitHub
