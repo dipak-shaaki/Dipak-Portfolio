@@ -104,13 +104,16 @@ export default function ProjectPage() {
         <TopNavigation onWorkClick={goToHome} onAboutClick={goToHome} onContactClick={goToHome} activeSection="work" />
       </div>
 
-      {/* Main content area with padding to avoid overlap with fixed header */}
-      <main className="container mx-auto px-4 pt-24 pb-8">
+      {/* Back to Work button positioned below fixed header */}
+      <div className="container mx-auto px-4 pt-20">
         <Button variant="ghost" className="mb-8 flex items-center" onClick={() => router.push("/")}>
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Work
         </Button>
+      </div>
 
+      {/* Main content area with padding to avoid overlap with fixed header */}
+      <main className="container mx-auto px-4 pt-0 pb-8">
         <div>
           <div className="mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-gray-900 dark:text-white">{project.title}</h1>
