@@ -20,7 +20,9 @@ export default function ResumePage() {
     // In a real application, you would generate and download the PDF here
     // For now, we'll just simulate the download
     const link = document.createElement("a")
-    link.href = "/placeholder.pdf" // Replace with actual PDF path
+    // !!! REPLACE '/your-cv-file.pdf' with the actual path to your CV PDF in the public directory !!!
+    // Example: link.href = "/Dipak_Shanki_CV.pdf"
+    link.href = "/your-cv-file.pdf"
     link.download = "Dipak_Resume.pdf"
     link.click()
 
