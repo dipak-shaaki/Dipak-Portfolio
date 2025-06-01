@@ -13,7 +13,7 @@ export default function Loader() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center"
       >
-        {/* Loader Image */}
+      
         <div className="mb-6">
           <Image
             src="../images/loader.png"
