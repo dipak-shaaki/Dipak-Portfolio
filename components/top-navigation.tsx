@@ -85,7 +85,7 @@ export default function TopNavigation({
             <button
               onClick={() => handleTabClick("work", onWorkClick)}
               className={`text-xs font-light transition-all ${
-                activeSection === "work" ? "text-black" : "text-gray-600 hover:text-black"
+                activeSection === "work" ? "text-black" : "text-black-600 hover:text-blue"
               }`}
             >
               <span className="font-medium mr-1"></span> Work
@@ -93,7 +93,7 @@ export default function TopNavigation({
             <button
               onClick={() => handleTabClick("about", onAboutClick)}
               className={`text-xs font-light transition-all ${
-                activeSection === "about" ? "text-black" : "text-gray-600 hover:text-black"
+                activeSection === "about" ? "text-black" : "text-black-600 hover:text-blue"
               }`}
             >
               <span className="font-medium mr-1"></span> About
@@ -101,7 +101,7 @@ export default function TopNavigation({
             <button
               onClick={() => handleTabClick("connect", onContactClick)}
               className={`text-xs font-light transition-all ${
-                activeSection === "connect" ? "text-black" : "text-gray-600 hover:text-black"
+                activeSection === "connect" ? "text-black" : "text-black-600 hover:text-blue"
               }`}
             >
               <span className="font-medium mr-1"></span> Contact
@@ -140,19 +140,19 @@ export default function TopNavigation({
           <div className="flex flex-col space-y-4">
             <button
               onClick={() => handleTabClick("work", onWorkClick)}
-              className={`text-left text-xs ${activeSection === "work" ? "text-black" : "text-gray-600"}`}
+              className={`text-left text-xs ${activeSection === "work" ? "text-black" : "text-black-600"}`}
             >
               <span className="font-medium mr-1"></span> Work
             </button>
             <button
               onClick={() => handleTabClick("about", onAboutClick)}
-              className={`text-left text-xs ${activeSection === "about" ? "text-black" : "text-gray-600"}`}
+              className={`text-left text-xs ${activeSection === "about" ? "text-black" : "text-black-600"}`}
             >
               <span className="font-medium mr-1"></span> About
             </button>
             <button
               onClick={() => handleTabClick("connect", onContactClick)}
-              className={`text-left text-xs ${activeSection === "connect" ? "text-black" : "text-gray-600"}`}
+              className={`text-left text-xs ${activeSection === "connect" ? "text-black" : "text-black-600"}`}
             >
               <span className="font-medium mr-1"></span> Contact
             </button>
