@@ -52,17 +52,15 @@ export default function TopNavigation({
   }
 
   // Determine text color based on theme
-  const textColor = !mounted ? "text-white" : resolvedTheme === "dark" ? "text-white" : "text-black"
   const bgColor = !mounted ? "bg-black" : resolvedTheme === "dark" ? "bg-black" : "bg-white"
   const borderColor = !mounted ? "border-gray-800" : resolvedTheme === "dark" ? "border-gray-800" : "border-gray-200"
-  const inactiveTextColor = !mounted ? "text-gray-400" : resolvedTheme === "dark" ? "text-gray-400" : "text-gray-600"
 
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className={`w-full ${bgColor} ${textColor} px-4 md:px-8 py-4 flex justify-between items-center border-b ${borderColor}`}
+      className={`w-full ${bgColor} text-black px-4 md:px-8 py-2 flex justify-between items-center border-b ${borderColor}`}
     >
       {/* Profile Picture */}
       <div className="font-medium text-sm md:text-base">
@@ -87,7 +85,7 @@ export default function TopNavigation({
             <button
               onClick={() => handleTabClick("work", onWorkClick)}
               className={`text-xs font-light transition-all ${
-                activeSection === "work" ? textColor : `${inactiveTextColor} hover:${textColor}`
+                activeSection === "work" ? "text-black" : "text-gray-600 hover:text-black"
               }`}
             >
               <span className="font-medium mr-1"></span> Work
@@ -95,7 +93,7 @@ export default function TopNavigation({
             <button
               onClick={() => handleTabClick("about", onAboutClick)}
               className={`text-xs font-light transition-all ${
-                activeSection === "about" ? textColor : `${inactiveTextColor} hover:${textColor}`
+                activeSection === "about" ? "text-black" : "text-gray-600 hover:text-black"
               }`}
             >
               <span className="font-medium mr-1"></span> About
@@ -103,7 +101,7 @@ export default function TopNavigation({
             <button
               onClick={() => handleTabClick("connect", onContactClick)}
               className={`text-xs font-light transition-all ${
-                activeSection === "connect" ? textColor : `${inactiveTextColor} hover:${textColor}`
+                activeSection === "connect" ? "text-black" : "text-gray-600 hover:text-black"
               }`}
             >
               <span className="font-medium mr-1"></span> Contact
@@ -142,19 +140,19 @@ export default function TopNavigation({
           <div className="flex flex-col space-y-4">
             <button
               onClick={() => handleTabClick("work", onWorkClick)}
-              className={`text-left text-xs ${activeSection === "work" ? textColor : inactiveTextColor}`}
+              className={`text-left text-xs ${activeSection === "work" ? "text-black" : "text-gray-600"}`}
             >
               <span className="font-medium mr-1"></span> Work
             </button>
             <button
               onClick={() => handleTabClick("about", onAboutClick)}
-              className={`text-left text-xs ${activeSection === "about" ? textColor : inactiveTextColor}`}
+              className={`text-left text-xs ${activeSection === "about" ? "text-black" : "text-gray-600"}`}
             >
               <span className="font-medium mr-1"></span> About
             </button>
             <button
               onClick={() => handleTabClick("connect", onContactClick)}
-              className={`text-left text-xs ${activeSection === "connect" ? textColor : inactiveTextColor}`}
+              className={`text-left text-xs ${activeSection === "connect" ? "text-black" : "text-gray-600"}`}
             >
               <span className="font-medium mr-1"></span> Contact
             </button>

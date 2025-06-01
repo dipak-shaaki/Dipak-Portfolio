@@ -47,12 +47,12 @@ export default function AboutSection() {
             A learning MERN Stack Developer with a keen interest in AI/ML. I thrive on solving complex problems and continuously learning new technologies. My journey in web development has equipped me with a solid foundation in both frontend and backend technologies, allowing me to build robust and scalable applications.
           </p>
         
-          <Link href="/resume">
+          {/* <Link href="/resume">
             <Button className="flex items-center gap-2 text-sm">
               <FileDown className="h-4 w-4" />
             Resume
             </Button>
-          </Link>
+          </Link> */}
         </motion.div>
 
         <motion.div
