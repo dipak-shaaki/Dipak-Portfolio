@@ -96,16 +96,16 @@ export default function ProjectPage() {
   }
 
   return (
-    <div className="relative min-h-screen bg-white dark:text-white dark:bg-gray-900">
+    <div className="relative min-h-screen bg-white dark:bg-black-900">
       <CustomCursor />
 
-      {/* Fixed Navigation Bar */}
       <div className="fixed top-0 left-0 right-0 z-50 ">
         <TopNavigation onWorkClick={goToHome} onAboutClick={goToHome} onContactClick={goToHome} activeSection="work" />
       </div>
-      {/* Fixed Theme Toggle Button */}
+     
       <div className="container mx-auto px-4 pt-20">
-        <Button variant="ghost" className="mb-8 flex items-center" onClick={() => router.push("/")}>
+        <Button variant="ghost" className="mb-8 flex items-center" onClick={() => router.push("/")}
+          style={{ transition: "none" }}>
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Work
         </Button>
