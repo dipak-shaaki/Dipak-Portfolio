@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
-import { motion } from "framer-motion"
+
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import CustomCursor from "@/components/custom-cursor"
-import ThemeToggle from "@/components/theme-toggle"
+
 import Footer from "@/components/footer"
 import TopNavigation from "@/components/top-navigation"
 
@@ -88,23 +88,22 @@ export default function ProjectPage() {
   }
 
   if (loading) {
-    return <div className="flex min-h-screen items-center justify-center bg-white dark:bg-black">Loading...</div>
+    return <div className="flex min-h-screen items-center justify-center bg-white dark:text-white">Loading...</div>
   }
 
   if (!project) {
-    return <div className="flex min-h-screen items-center justify-center bg-white dark:bg-black">Project not found</div>
+    return <div className="flex min-h-screen items-center justify-center bg-white dark:text-white">Project not found</div>
   }
 
   return (
-    <div className="relative min-h-screen bg-white dark:bg-black">
+    <div className="relative min-h-screen bg-white dark:text-white dark:bg-gray-900">
       <CustomCursor />
 
       {/* Fixed Navigation Bar */}
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50 ">
         <TopNavigation onWorkClick={goToHome} onAboutClick={goToHome} onContactClick={goToHome} activeSection="work" />
       </div>
-
-      {/* Back to Work button positioned below fixed header */}
+      {/* Fixed Theme Toggle Button */}
       <div className="container mx-auto px-4 pt-20">
         <Button variant="ghost" className="mb-8 flex items-center" onClick={() => router.push("/")}>
           <ArrowLeft className="mr-2 h-4 w-4" />
