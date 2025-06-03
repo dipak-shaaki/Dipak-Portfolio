@@ -40,9 +40,9 @@ const projects = [
     fullDescription:
       "A complete land management system for Nepal, built with React and D3.js. The application provides a user-friendly interface for managing land records, including ownership details, land use, and transaction history.\n\nThe backend is built with mongodb for real-time data synchronization and authentication. The application is designed to be responsive and accessible, ensuring that users can manage land records from any device.",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/screenshots/Bhoomi.png?height=600&width=800",
+      "/screenshots/bhoomi-2.png?height=600&width=800",
+      "/screenshots/bhoomi-3.png?height=600&width=800",
     ],
   },
   {
