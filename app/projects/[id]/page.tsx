@@ -20,14 +20,14 @@ const projects = [
     title: "SAMA Health Platform",
     description: "A full-stack e-health solution with payment integration",
     category: "Interaction & Development",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/screenshots/landing.png?height=400&width=100%",
     tags: ["React", "Node.js", "MongoDB", "TypeScript"],
     fullDescription:
       " SAMA Health Platform is a comprehensive digital healthcare platform built with React, TypeScript, Tailwind CSS, and Node.js/Express. It provides a seamless user experience for patients and healthcare providers, allowing them to manage appointments, access medical records, and communicate securely.\n\nThe platform features a responsive design, ensuring accessibility across devices. The backend is powered by Node.js and Express, with MongoDB for data storage. The application also includes payment integration for easy transaction processing.",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/screenshots/landing.png?height=600&width=800",
+      "/screenshots/e-pharmacy.png?height=600&width=800",
+      "/screenshots/Symptomchecker.png?height=600&width=800",
     ],
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "Bhoomi Pranali",
     description: "Analytics dashboard for social media management",
     category: "Full Stack Development",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/screenshots/Bhoomi.png?height=300&width=500",
     tags: ["MongoDB", "nextjs", "javascript"],
     fullDescription:
       "A complete land management system for Nepal, built with React and D3.js. The application provides a user-friendly interface for managing land records, including ownership details, land use, and transaction history.\n\nThe backend is built with mongodb for real-time data synchronization and authentication. The application is designed to be responsive and accessible, ensuring that users can manage land records from any device.",
