@@ -73,7 +73,7 @@ export default function ContactSection() {
 
   return (
     <div className="w-full max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-9">
         <div className="lg:col-span-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,7 +81,7 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-black dark:text-white">            
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-black dark:text-white lg:-ml-8">            
               Have a
               project
               <br />
@@ -94,7 +94,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 lg:-ml-8">
               <div className="space-y-1">
                 <label htmlFor="name" className="text-sm text-gray-500 dark:text-gray-400">
                   01 — What's your name?
