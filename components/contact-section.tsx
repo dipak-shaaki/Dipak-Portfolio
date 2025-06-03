@@ -81,7 +81,7 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-black dark:text-white lg:-ml-8">            
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-black dark:text-white lg:-ml-8">            
               Have a
               project
               <br />
