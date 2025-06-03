@@ -127,8 +127,14 @@ export default function ProjectPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-              <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                width={800}
+                height={500}
+                className="object-contain w-full h-full"
+              />
             </div>
 
             <div className="max-w-none">
@@ -143,12 +149,13 @@ export default function ProjectPage() {
           <h2 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Project Screenshots</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {project.screenshots.map((screenshot: string, index: number) => (
-              <div key={index} className="relative h-[200px] sm:h-[250px] rounded-lg overflow-hidden">
+              <div key={index} className="relative h-[200px] sm:h-[250px] rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                 <Image
                   src={screenshot || "/placeholder.svg"}
                   alt={`${project.title} screenshot ${index + 1}`}
-                  fill
-                  className="object-cover"
+                  width={800}
+                  height={500}
+                  className="object-contain w-full h-full"
                 />
               </div>
             ))}
