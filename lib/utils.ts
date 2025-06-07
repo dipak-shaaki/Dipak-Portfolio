@@ -1,3 +1,5 @@
+
+// This file contains utility functions for the application.
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
