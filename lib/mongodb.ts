@@ -1,17 +1,26 @@
 import { MongoClient } from 'mongodb'
 
-if (!process.env.MONGODB_URI) {
-  throw new Error('Invalid/Missing environment variable: "MONGODB_URI"')
+// Only throw error if we're trying to connect, not during build
+const getMongoUri = () => {
+  if (!process.env.MONGODB_URI) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Invalid/Missing environment variable: "MONGODB_URI"')
+    }
+    // During build time, return a dummy URI to prevent build errors
+    return 'mongodb://localhost:27017/dummy'
+  }
+  return process.env.MONGODB_URI
 }
 
-const uri = process.env.MONGODB_URI
+const uri = getMongoUri()
 const options = {}
 
 let client
 let clientPromise: Promise<MongoClient>
 
 if (process.env.NODE_ENV === 'development') {
-
+  // In development mode, use a global variable so that the value
+  // is preserved across module reloads caused by HMR (Hot Module Replacement).
   let globalWithMongo = global as typeof globalThis & {
     _mongoClientPromise?: Promise<MongoClient>
   }
