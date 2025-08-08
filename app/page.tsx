@@ -25,12 +25,17 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   // Scroll to section function
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement>, section: string) => {
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>, section: string) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" })
       setActiveSection(section)
     }
   }
+
+  // Wrapper functions for TopNavigation
+  const handleWorkClick = () => scrollToSection(workRef, "work")
+  const handleAboutClick = () => scrollToSection(aboutRef, "about")
+  const handleContactClick = () => scrollToSection(contactRef, "connect")
 
   // Check which section is in view
   useEffect(() => {
@@ -110,9 +115,9 @@ export default function Home() {
       {/* Navigation Bar with Theme Toggle integrated */}
       <div className="fixed top-0 left-0 right-0 z-50">
         <TopNavigation
-          onWorkClick={() => scrollToSection(workRef, "work")}
-          onAboutClick={() => scrollToSection(aboutRef, "about")}
-          onContactClick={() => scrollToSection(contactRef, "connect")}
+          onWorkClick={handleWorkClick}
+          onAboutClick={handleAboutClick}
+          onContactClick={handleContactClick}
           activeSection={activeSection}
         />
       </div>
