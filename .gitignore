@@ -6,6 +6,9 @@
 # next.js
 /.next/
 /out/
+/public/images/
+/public/screenshots/
+
 
 # production
 /build
