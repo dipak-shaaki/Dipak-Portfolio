@@ -142,7 +142,7 @@ export default function TopNavigation({
               onClick={() => handleTabClick("work", onWorkClick)}
               className={`text-left text-xs ${activeSection === "work" ? "text-black" : "text-black-600"}`}
             >
-              <span className="font-medium mr-1"></span> Work
+              <span className="font-medium mr-1"></span> Projects
             </button>
             <button
               onClick={() => handleTabClick("about", onAboutClick)}

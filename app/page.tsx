@@ -33,7 +33,7 @@ export default function Home() {
   }
 
   // Wrapper functions for TopNavigation
-  const handleWorkClick = () => scrollToSection(workRef, "work")
+  const handleWorkClick = () => scrollToSection(workRef, "projects")
   const handleAboutClick = () => scrollToSection(aboutRef, "about")
   const handleContactClick = () => scrollToSection(contactRef, "connect")
 
@@ -47,7 +47,7 @@ export default function Home() {
         scrollPosition >= workRef.current.offsetTop &&
         scrollPosition < (aboutRef.current?.offsetTop || Number.MAX_VALUE)
       ) {
-        setActiveSection("work")
+        setActiveSection("project")
       } else if (
         aboutRef.current &&
         scrollPosition >= aboutRef.current.offsetTop &&
