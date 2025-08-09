@@ -88,7 +88,7 @@ export default function TopNavigation({
                 activeSection === "work" ? "text-black" : "text-black-600 hover:text-blue"
               }`}
             >
-              <span className="font-medium mr-1"></span> Work
+              <span className="font-medium mr-1"></span> Projects
             </button>
             <button
               onClick={() => handleTabClick("about", onAboutClick)}

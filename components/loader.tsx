@@ -18,8 +18,8 @@ export default function Loader() {
           <Image
             src="../images/loader.png"
             alt="Loading..."
-            width={350}
-            height={400}
+            width={150}
+            height={200}
           />
         </div>
       </motion.div>

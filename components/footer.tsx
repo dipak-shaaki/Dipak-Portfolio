@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-black dark:text-white text-center">
-            Copyright © {new Date().getFullYear()} All rights reserved.
+            Copyright © {new Date().getFullYear()}. All rights reserved.
           </p>
         </motion.div>
       </div>

@@ -163,7 +163,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-2"
             >
-              <h2 className="text-sm font-light uppercase tracking-wider text-black dark:text-white">Recent Work</h2>
+              <h2 className="text-sm font-light uppercase tracking-wider text-black dark:text-white">Recent Projects</h2>
             </motion.div>
             <div className="h-px w-full bg-gray-300 dark:bg-gray-700 mb-6"></div>
           </div>

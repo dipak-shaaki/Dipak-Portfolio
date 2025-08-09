@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function AboutSection() {
   const highlights = [
-    { icon: <Code2 className="h-5 w-5" />, text: "MERN Stack Developer" },
+    { icon: <Code2 className="h-5 w-5" />, text: "MERN Stack" },
     { icon: <Brain className="h-5 w-5" />, text: "AI/ML Enthusiast" },
     { icon: <BookOpen className="h-5 w-5" />, text: "Quick Learner" },
     { icon: <Target className="h-5 w-5" />, text: "Problem Solver" },
@@ -28,7 +28,7 @@ export default function AboutSection() {
     },
     {
       category: "Tools",
-      technologies: ["Git", "GitHub", "VS Code", "Postman", "Jupyter"],
+      technologies: ["Git", "GitHub", "VS Code", "Postman", "Jupyter Notebook"],
     },
   ]
 
@@ -44,8 +44,10 @@ export default function AboutSection() {
         >
         
           <p className="text-base mb-4 text-black dark:text-white leading-relaxed">
-            A learning MERN Stack Developer with a keen interest in AI/ML. I thrive on solving complex problems and continuously learning new technologies. My journey in web development has equipped me with a solid foundation in both frontend and backend technologies, allowing me to build robust and scalable applications.
-          </p>
+          Passionate about Data Science, AI/ML & MERN Stack | Quality Assurance 
+          <br />
+           <br /> 
+         Right now, looking for an   <b style={{color: "black",fontSize: "1.2rem"}}>INTERNSHIP!!!</b> </p>
         
           {/* <Link href="/resume">
             <Button className="flex items-center gap-2 text-sm">
