@@ -16,18 +16,21 @@ export default function NameHoverEffect({ children }: NameHoverEffectProps) {
   const nameRef = useRef<HTMLSpanElement>(null)
 
   // Array of images that will cycle through
-  const images = [
+  const allImages = [
     "/images/ok.png",
     "/images/6.png",
-    "/images/1.png", 
+    "/images/1.png",
     "/images/11.png",
-    "/images/111.png", 
+    "/images/111.png",
     "/images/1111.png",
     // "/images/11111.png", 
     // "/images/profile.png",
-  
-
   ]
+
+  // Initialize component (no need to track available images anymore)
+  useEffect(() => {
+    // Component is ready
+  }, [])
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -53,12 +56,37 @@ export default function NameHoverEffect({ children }: NameHoverEffectProps) {
 
   const handleMouseEnter = () => {
     setIsHovered(true)
-    // Pick a random image index different from the current one
-    let nextIndex = currentImageIndex
-    while (nextIndex === currentImageIndex && images.length > 1) {
-      nextIndex = Math.floor(Math.random() * images.length)
+
+    // Pick a random image from all images (allowing repeats for most images)
+    const randomIndex = Math.floor(Math.random() * allImages.length)
+    const selectedImage = allImages[randomIndex]
+
+    setCurrentImageIndex(randomIndex)
+
+    // Only track 6.png in localStorage - other images can repeat freely
+    if (selectedImage === "/images/6.png") {
+      try {
+        const shownImages = JSON.parse(localStorage.getItem('shownImages') || '[]')
+
+        // If 6.png has already been shown, pick a different image
+        if (shownImages.includes("/images/6.png")) {
+          // Find another random image that's not 6.png
+          const otherImages = allImages.filter(img => img !== "/images/6.png")
+          const newRandomIndex = Math.floor(Math.random() * otherImages.length)
+          const newSelectedImage = otherImages[newRandomIndex]
+          const newOriginalIndex = allImages.indexOf(newSelectedImage)
+
+          setCurrentImageIndex(newOriginalIndex)
+          return
+        }
+
+        // Mark 6.png as shown
+        const updatedShownImages = [...shownImages, "/images/6.png"]
+        localStorage.setItem('shownImages', JSON.stringify(updatedShownImages))
+      } catch (error) {
+        console.error('Failed to update localStorage:', error)
+      }
     }
-    setCurrentImageIndex(nextIndex)
   }
 
   const handleMouseLeave = () => {
@@ -95,7 +123,7 @@ export default function NameHoverEffect({ children }: NameHoverEffectProps) {
                 className="w-full h-full"
               >
                 <Image
-                  src={images[currentImageIndex] || "/placeholder.svg"}
+                  src={allImages[currentImageIndex] || "/placeholder.svg"}
                   alt={`Dipak Photo ${currentImageIndex + 1}`}
                   width={128}
                   height={128}
