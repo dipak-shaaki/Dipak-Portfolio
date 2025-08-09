@@ -178,10 +178,12 @@ export default function ContactSection() {
             <div className="mb-6 flex justify-end">
               <div className="w-24 h-24 rounded-full overflow-hidden">
                 <Image
-                  src="/images/profile.jpg"
+                  src="/images/1.png"
                   alt="Profile"
                   width={96}
                   height={96}
+                  quality={80}
+                 
                   className="object-cover w-full h-full"
                 />
               </div>

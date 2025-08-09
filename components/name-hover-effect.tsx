@@ -17,11 +17,16 @@ export default function NameHoverEffect({ children }: NameHoverEffectProps) {
 
   // Array of images that will cycle through
   const images = [
-    "/placeholder.svg?height=200&width=200&text=Photo1",
-    "/placeholder.svg?height=200&width=200&text=Photo2",
-    "/placeholder.svg?height=200&width=200&text=Photo3",
-    "/placeholder.svg?height=200&width=200&text=Photo4",
-    "/placeholder.svg?height=200&width=200&text=Photo5",
+    "/images/ok.png",
+    "/images/6.png",
+    "/images/1.png", 
+    "/images/11.png",
+    "/images/111.png", 
+    "/images/1111.png",
+    // "/images/11111.png", 
+    // "/images/profile.png",
+  
+
   ]
 
   useEffect(() => {
