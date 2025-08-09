@@ -2,6 +2,7 @@ import type React from "react"
 import "@/app/globals.css"
 import { cn } from "@/lib/utils"
 import ThemeScrollEffect from "@/components/theme-scroll-effect"
+import SiteProtection from "@/components/site-protection"
 
 
 // Import Plus Jakarta Sans Variable font
@@ -24,7 +25,8 @@ export default function RootLayout({
         <meta name="description" content="Personal portfolio of Dipak Shanki" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", plusJakartaSans.variable)}>
-      <ThemeScrollEffect>
+        <SiteProtection />
+        <ThemeScrollEffect>
           {children}
         </ThemeScrollEffect>
       </body>
