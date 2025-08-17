@@ -9,8 +9,8 @@ export default function AboutSection() {
   const highlights = [
     { icon: <Code2 className="h-5 w-5" />, text: "MERN Stack" },
     { icon: <Brain className="h-5 w-5" />, text: "AI/ML Enthusiast" },
-    { icon: <BookOpen className="h-5 w-5" />, text: "Quick Learner" },
-    { icon: <Target className="h-5 w-5" />, text: "Problem Solver" },
+    // { icon: <BookOpen className="h-5 w-5" />, text: "Quick Learner" },
+    // { icon: <Target className="h-5 w-5" />, text: "Problem Solver" },
   ]
 
   const skills = [
@@ -44,10 +44,10 @@ export default function AboutSection() {
         >
         
           <p className="text-base mb-4 text-black dark:text-white leading-relaxed">
-          Passionate about Data Science, AI/ML & MERN Stack | Quality Assurance 
-          <br />
+         Learning and building full-stack web applications with a focus on the MERN stack.
+         Passionate about AI/ML and data science.
            <br /> 
-         Right now, looking for an   <b style={{color: "black",fontSize: "1.2rem"}}>INTERNSHIP!!!</b> </p>
+         Right now, looking for an   <b style={{color: "black",fontSize: "1.2rem"}}>INTERNSHIP!</b> </p>
         
           {/* <Link href="/resume">
             <Button className="flex items-center gap-2 text-sm">
