@@ -47,8 +47,25 @@ export default function AboutSection() {
          Learning and building full-stack web applications with a focus on the MERN stack.
          Passionate about AI/ML and data science.
            <br /> 
-         Right now, looking for an   <b style={{color: "black",fontSize: "1.2rem"}}>INTERNSHIP!</b> </p>
-        
+        Right now, looking for an 
+<b
+  style={{
+    color: "", // bright red
+    fontSize: "0.90rem", // larger font
+    fontWeight: 900, // extra bold
+    marginLeft: 1,
+    // textShadow: "1px 1px 2px rgba(0,0,0,0.3)", // subtle shadow
+    backgroundColor: "#fff2f0", // light background highlight
+    padding: "1px 3px",
+    borderRadius: 4,
+  }}
+>
+  INTERNSHIP!
+</b>
+
+</p>
+
+
           {/* <Link href="/resume">
             <Button className="flex items-center gap-2 text-sm">
               <FileDown className="h-4 w-4" />
