@@ -12,9 +12,9 @@ interface WorkItemProps {
 export default function WorkItem({ id, title, category, index }: WorkItemProps) {
   // GitHub repository URLs for each project
   const githubUrls = {
-    1: "https://github.com/dipak-shaaki/sama-health-platform",
-    2: "https://github.com/dipak-shaaki/bhoomi-pranali", // Update with actual repo URL
-    3: "https://github.com/dipak-shaaki/forest-fire-detection", // Update with actual repo URL
+    1: "https://github.com/dipak-shaaki/SAMA-Final",
+    2: "https://github.com/dipak-shaaki/bhoomi-pranali", 
+    3: "https://github.com/dipak-shaaki/Forest_Fire_Prediction", 
   }
 
   const handleClick = () => {

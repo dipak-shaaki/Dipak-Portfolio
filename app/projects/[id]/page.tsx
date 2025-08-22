@@ -48,7 +48,7 @@
 //   {
 //     id: 3,
 //     title: "",
-//     description: "Forest fire detection ",
+//     description: "Forest fire Prediction ",
 //     category: "Machine Learning,AI",
 //     image: "/placeholder.svg?height=300&width=500",
 //     tags: ["Python", "TensorFlow", "React", "Flask"],

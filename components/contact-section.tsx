@@ -128,14 +128,14 @@ export default function ContactSection() {
 
               <div className="space-y-1">
                 <label htmlFor="services" className="text-sm text-gray-500 dark:text-gray-400">
-                  04 — What services are you looking for?
+                  04 — What's on your mind?
                 </label>
                 <Input
                   id="services"
                   name="services"
                   value={formData.services}
                   onChange={handleChange}
-                  placeholder="Data analysis, Web Development"
+                  placeholder="Project idea,Work collaboration..."
                   className="border-0 border-b border-gray-300 dark:border-gray-700 rounded-none px-0 py-2 text-black dark:text-white bg-transparent focus-visible:ring-0 focus-visible:border-primary"
                 />
               </div>

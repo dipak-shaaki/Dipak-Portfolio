@@ -1,4 +1,4 @@
-// Simple in-memory storage fallback when MongoDB is not available
+
 let messageStorage: any[] = [];
 
 export const addMessage = (message: any) => {
