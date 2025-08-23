@@ -18,7 +18,6 @@ export default function NameHoverEffect({ children }: NameHoverEffectProps) {
   // Array of images that will cycle through
   const allImages = [
     "/images/ok.png",
-    "/images/6.png",
     "/images/1.png",
     "/images/11.png",
     "/images/111.png",
